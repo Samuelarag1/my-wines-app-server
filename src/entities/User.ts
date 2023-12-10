@@ -3,7 +3,7 @@ import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateCol
 @Entity()
 export class User extends BaseEntity{
     @PrimaryGeneratedColumn()
-    id: number;
+    id!: number;
 
     @Column()
     name?: string;
@@ -12,14 +12,14 @@ export class User extends BaseEntity{
     age?: number;
 
     @Column()
-    email: string;
+    email!: string;
 
     @Column()
-    password: string;
+    password!: string;
 
     @CreateDateColumn()
-    created_at: Date;
+    created_at!: Date;
 
     @UpdateDateColumn()
-    updated_at: Date;
+    updated_at!: Date;
 }
